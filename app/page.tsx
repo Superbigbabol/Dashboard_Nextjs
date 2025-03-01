@@ -1,7 +1,12 @@
 'use client'
 import { useState } from "react";
 
-function Xian({lrgToast, miniToast}) {
+type TQProps = {
+  lrgToast: number;
+  miniToast: number;
+};
+
+function Xian({lrgToast, miniToast}: TQProps) {
   const XIAN = {
     butter: 150,
     salt: 1,
@@ -33,7 +38,7 @@ function Xian({lrgToast, miniToast}) {
   );
 }
 
-function Mian({lrgToast, miniToast}) {
+function Mian({lrgToast, miniToast}: TQProps) {
   
   const MIANTUAN = {
     flour: 1400,
@@ -82,6 +87,8 @@ function Mian({lrgToast, miniToast}) {
         <li>黄油: {Math.ceil(MIANTUAN.butter*calMianRatio())}g</li>
       </ul>
     
+      <div className="ml-10 h-32 w-2 border-green-700 border-t-4 border-l-4 border-b-4 rounded-tl-xl rounded-bl-xl"></div>
+
       <ul>
         <li className="flex">
           粉: 
